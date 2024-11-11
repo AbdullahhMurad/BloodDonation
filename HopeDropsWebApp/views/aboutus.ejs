@@ -1,0 +1,180 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/all.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <title>About us</title>
+</head>
+<body>
+<!--start nav-->
+
+<%- include('../views/partials/header.ejs') %>
+
+
+
+
+
+
+<!--Start WhoWeAre-->
+  <div class="whoWeAre">
+    <div class="container col-xxl-8 px-4 py-5 ">
+      <div class="row align-items-center ">
+        <div class="col-lg-6 mt-xl-0">
+          <h1 class="text display-5 fw-bold lh-1 mb-3 text-center text-lg-start">Who We Are?</h1>
+          <p class="text-center text-lg-start">We are a small group of students from Jordan who want to do something small but meaningful for our nation and for the people by assisting those in need of blood in finding local, quick, and easy blood donors</p>
+        </div>
+        <div class="d-none d-lg-block col-12 col-lg-6 d-flex flex-column align-items-center mb-5">
+          <img src="/public/Images/WhoWeAre.svg" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+<!--end WhoWeAre-->
+
+
+
+<!--Start purpose-->
+  <div class="purpose">
+    <div class="container col-xxl-8 px-4 py-5 ">
+      <div class="row align-items-center">
+        <div class="d-none d-lg-block col-12 col-lg-6 d-flex flex-column align-items-center mb-5">
+          <img src="/public/Images/ourPurpose.svg" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6 mt-xl-0">
+          <h1 class="text display-5 fw-bold lh-1 mb-3 text-center text-lg-start">Our purpose</h1>
+          <p class="text-center text-lg-start">How many times have you received calls asking you to give blood? Or how often have you seen requests for blood donations in posts on Facebook? This has probably happened to you numerous times, as it has to us personally. In fact, it has happened to us so frequently that it can be said that finding blood donors has become challenging and problematic for many people, sometimes to the point where it can mean the difference between life and death. This has always driven us to look for a solution in our country, which we hope for this platform will be.</p>
+        </div>
+       </div>
+    </div>
+  </div>
+<!--end purpose-->
+
+<!--Start aim-->
+  <div class="aim">
+    <div class="container col-xxl-8 px-4 py-5 ">
+     <div class="row align-items-center mb-5">
+         <div class="col-lg-6 mt-xl-0">
+          <h1 class="text display-5 fw-bold lh-1 mb-3 text-center text-lg-start">Our aim</h1>
+          <p class="text-center text-lg-start">It's easy!! in Amman, obtaining blood will not be a challenge. Do you require blood donors? Thousands of donors in your area can be found with just a short search on this portal.</p>
+         </div>
+         <div class="d-none d-lg-block col-12 col-lg-6 d-flex flex-column align-items-center mb-5">
+          <img src="/public/Images/ourAim.svg" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy">
+         </div>
+      </div>
+    </div>
+  </div>
+<!--end aim-->
+  
+<div class="container mt-5" style="margin-bottom: 250px;">
+ 
+  <div class="row">
+    <h1 class="display-4 text-center" style="color: #d27878; background-color: white;">Our Team</h1>
+
+    <div class="col-md-6 mb-4">
+      <div class="card" style="background-color: #d27878;">
+        <div class="card-body">
+          <h5 class="card-title">Abdullah Murad</h5>
+          <h5 class="card-title">Backend Developer</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card" style="background-color: #d27878;">
+        <div class="card-body">
+          <h5 class="card-title">Zadalkher Jehad</h5>
+          <h5 class="card-title">Frontend Developer</h5>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card" style="background-color: #d27878;">
+        <div class="card-body"> 
+          <h5 class="card-title">Marah Awwad</h5>
+          <h5 class="card-title">UI UX Designer</h5>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card" style="background-color: #d27878;">
+        <div class="card-body">
+          <h5 class="card-title">Sara Basel</h5> 
+          <h5 class="card-title">Documentation</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--Start footer-->
+<%- include('../views/partials/footer.ejs') %>
+
+  <!-- <div class="footer pt-5 pb-5 text-center text-md-start">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="info mb-4">
+            <h5 class="fw-bold" href="#"><span>Hope</span>Drops</h5>
+            <p>If you are unable to donate blood , you can still difference by spreading the word about this website on social media</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="links">
+            <h5 class=>Links</h5>
+            <ul class="list-unstyled lh-lg">
+              <li><a href="/views/home.ejs">Home</a></li>
+              <li><a href="/views/donors.ejs">List Of Donors</a></li>
+              <li><a href="/views/aboutus.ejs">About</a></li>
+              <li><a href="/views/MyAccount.ejs">My Account</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="links">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled lh-lg">
+              <li>+9627090656044</li>
+              <li>HopeDrops24@gmail.com </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2">
+          <div class="contact mb-4">
+            <h5 class="text-center">Social Media</h5>
+            <ul class="list-unstyled mt-3 d-flex gap-3 align-items-center justify-content-center">
+              <a class="d-block text-light" href="https://www.facebook.com/"><i class="fa-brands fa-facebook p-2 fa-lg" style="color: #000000;"></i></a>
+              <a class="d-block text-light" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg instagram  p-2" style="color: #000000;"></i></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!--End footer-->
+
+<!-- <script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/all.min.js"></script> -->
+
+
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/all.min.js"></script>
+<script src="/public/main.js"></script>    
+
+
+</body>
+</ejs>

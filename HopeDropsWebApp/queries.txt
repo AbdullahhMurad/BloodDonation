@@ -1,0 +1,59 @@
+CREATE TABLE donors (
+    donor_id SERIAL PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone_number VARCHAR(15),
+    password VARCHAR(255) NOT NULL,
+    blood_type VARCHAR(5) NOT NULL,
+    city_name VARCHAR(255) NOT NULL;
+);
+
+CREATE TABLE recipients (
+    recipient_id SERIAL PRIMARY KEY,
+    recipient_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone_number VARCHAR(15),
+    blood_type VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE hospitals (
+    hospital_id SERIAL PRIMARY KEY,
+    hospital_name VARCHAR(255) NOT NULL,
+	city VARCHAR(255) NOT NULL,
+	street VARCHAR(255) NOT NULL,	
+    phone_number VARCHAR(15),
+);
+
+CREATE TABLE blood_donation (
+    donation_id SERIAL PRIMARY KEY,
+    donor_id INT REFERENCES donors(donor_id),
+    donation_date DATE NOT NULL,
+    donation_time TIME NOT NULL,
+    blood_type VARCHAR(5) NOT NULL,
+    quantity_ml INT NOT NULL,
+    recipient_id INT REFERENCES recipients(recipient_id),
+    hospital_id INT REFERENCES hospitals(hospital_id),
+    processing_status VARCHAR(20) DEFAULT 'Pending'
+);
+
+CREATE TABLE doctors (
+    doctor_id SERIAL PRIMARY KEY,
+    doctor_name VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL UNIQUE,
+    hospital_id INT REFERENCES hospitals(hospital_id),
+	phone_number VARCHAR(15),
+	specialization VARCHAR(255) NOT NULL,
+    license_number VARCHAR(20) UNIQUE
+);
+
+CREATE TABLE city(
+	id SERIAL PRIMARY KEY,
+	name varchar(50),
+	donor_id INT REFERENCES donors(donor_id),
+	hospital_id INT REFERENCES hospitals(hospital_id)
+);
+
+
+
+--JOIN STATEMENTS in order to display data based on certain criteria searched by the user 
+

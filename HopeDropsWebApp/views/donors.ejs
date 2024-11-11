@@ -1,0 +1,161 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/all.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <title>List Of Donors</title>
+
+    <!-- <script>
+      function getBloodTypeText(bloodTypeIndex) {
+          const bloodTypes = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
+          return bloodTypes[bloodTypeIndex - 1]; // Adjust index if needed
+      }
+    </script> -->
+
+
+
+</head>
+<body>
+<!--start nav-->
+
+
+
+<%- include('../views/partials/header.ejs') %>
+
+
+
+
+ 
+<!--start search-->
+  <div class="search pt-5 ">
+
+    
+
+    <div class="container">
+
+
+
+      <div class="row justify-content-center">
+            
+        <div class="searchBox col-12 grey-container bg-light p-4   rounded-3 shadow p-5 position-relative">
+
+          <!-- <div class="col-lg-12 grey-container bg-light p-4 rounded"> -->
+
+                <h3 style="text-align: center; margin-bottom: 50px ; ">Find donors with matching blood type</h3>
+          <form action="donors" method="post" class="d-flex flex-column flex-xl-row gap-3 text-center">   
+            <div class=" w-100">
+           
+              <select name="bloodType" class="form-select form-select-lg" style="width: 480px;"  required>
+                <option selected hidden style="display:none" value="">Blood Type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+            </div>
+            <div class=" w-100">
+            <select name="city" class="form-select form-select-lg"  style="width: 480px;" required>
+                <option selected hidden style="display:none" value="">City</option>
+                <option value="Amman">Amman</option>
+                <option value="Madaba">Madaba</option>
+                <option value="Irbid">Irbid</option>
+                <option value="Zarqa">Zarqa</option>
+                <option value="Mafraq">Mafraq</option>
+                <option value="Ajloun">Ajloun</option>
+            </select>
+            </div>
+            <div class="w-100">
+
+            </div>
+            <div class=" w-100">
+
+              <!-- <a class="btn searchBtn fw-bold" href="#" type="submit"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a> -->
+
+           <form action="/donors" method="post">   
+              <button class="btn searchBtn fw-bold"  style="width: 200px;"    type="submit">
+                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+              </button>
+          </form>
+          
+        </div>
+          </form> 
+        </div>         
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  
+<!--end search-->
+
+<!--start Donors-->
+
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <% if (donors && donors.length > 0) { %>
+      <% donors.forEach(donor => { %>
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+          <!-- <div class="card" style="background-color: #D27878;">
+             -->
+             <div class="card" style="background-color: #D27878;" >
+
+            <div class="card-body" style="background-color: #f1f1f1"  >
+              <h5 class="card-title" style="color: #d27878;"><%= donor.full_name %></h5>
+              <p class="card-text">Blood Type: <%= donor.blood_type %></p>
+              <p class="card-text">City: <%= donor.city_name %></p>
+              <p class="card-text">Phone: <%= donor.phone_number %></p>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p>No donors found.</p>
+    <% } %>
+  </div>
+</div>
+<!--start Statistics-->
+
+<%- include('../views/partials/statistics.ejs') %>
+
+  
+
+<%- include('../views/partials/footer.ejs') %>
+
+  
+
+<!-- <script src="/main.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/all.min.js"></script>     -->
+
+<!-- <script>
+  function getBloodTypeText(bloodTypeIndex) {
+      const bloodTypes = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
+      return bloodTypes[bloodTypeIndex - 1]; // Adjust index if needed
+  }
+</script> -->
+
+
+
+
+
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/all.min.js"></script>
+<script src="/public/main.js"></script>
+
+
+</body>
+</ejs>

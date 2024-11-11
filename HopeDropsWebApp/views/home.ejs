@@ -1,0 +1,185 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    <link rel="stylesheet" href="/public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/all.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  
+
+    <!-- This statement kharabat 2l denye  -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+
+    <title>Home</title>
+</head>
+<body>
+<!--start nav-->
+
+    <%- include('../views/partials/header.ejs') %>
+
+  
+
+<!--start section-->
+  <div class="section d-flex justify-content-center align-items-center " style="background-color: #c74d4d;">
+    <div class="text-center ">
+      <div class="mt-5 mb-5 position-relative text-center">
+        <!--  -->
+       <img src="/public/Images/care.png" class="mb-4" style="color: black;">
+
+       <!--  -->
+       <h2 class="mb-5 text-uppercase" style="color: black;">Your blood donation could Save someone's life</h2>
+       <a class="btn mb-5 main-btn me-3 fw-bold" href="/views/donors.ejs" style="background-color: #f1f1f1;"   >Need Blood</a>
+       <a class="btn mb-5 main-btn fw-bold" href="/views/register.ejs" style="background-color: #f1f1f1;"  >Register as a Donor <i class="fa-regular fa-heart"></i></a>
+       </div>            
+    </div>
+  </div>
+<!--end section-->
+
+<!--start benefits-->
+  <div class="benefits text-center pt-5 pb-5"> 
+    <div class="container">
+      <div class="main-title mt-5 mb-5 position-relative text-center">
+        <h2>The health benefits of blood donation</h2>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 text-start ps-5">
+          <div class="items">
+            <h4 class="item"><i class="fa-solid fa-droplet drop"></i> Helps the liver stay health</h4>
+            <h4 class="item"><i class="fa-solid fa-droplet drop"></i> Reduce the risk of cancer</h4>
+            <h4 class="item"><i class="fa-solid fa-droplet drop"></i> Reduce the risk of heart attack</h4>
+            <h4 class="item"><i class="fa-solid fa-droplet drop"></i> Reduce harmful iron stores</h4>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="image"><img src="/public/Images/Blood donation-cuate.svg" class="img-fluid"></div>
+        </div>
+      </div>  
+    </div>
+  </div>
+<!--End benefits-->
+   
+<!--Start Conditions-->
+  <div class="Conditions pt-5 pb-5 text-center">
+    <div class="main-title mt-5 mb-5 position-relative text-center">
+      <h2>Conditions that make you eligible to donate blood</h2>
+    </div>
+
+    <div class="text d-flex justify-content-center ">
+      <div class="text-start ">
+        <h4><i class="fa-solid fa-droplet drop"></i> The donor being in a good health without any contagious diseases</h4>
+        <h4><i class="fa-solid fa-droplet drop"></i> Having an age between 18 and 65</h4>
+        <h4><i class="fa-solid fa-droplet drop"></i> Maintaining a minimum weight of 50 kg</h4>
+        <h4><i class="fa-solid fa-droplet drop"></i> Having normal pulse rate, blood pressure, and temperature levels.</h4>
+      </div>
+    </div>
+  </div>
+<!--End Conditions-->
+
+<!--Start share-->
+  <div class="share text-center pt-5 pb-5  " style="background-color: #D27878;">
+    <div class="container d-flex flex-column align-items-center">
+        <h3 class="fs-2 text-center">Help us help those in need of blood </h3>
+        <p class="text-center fs-5">The best way to help is, of course, by registering as a blood donor. If you can't do that, you can always help by sharing this website on social media</p>
+        <p class="fs-3 fw-bold">Share the website on:</p>
+        <div class="socialMediaShare">  
+          <button class="btn shareBtn p-3 mb-5 mb-md-0"><a href="https://api.whatsapp.com/send?text=اكتب رسالتك هنا&url=file:///C:/Users/hp/Desktop/HopeDrops%20website/home.ejs#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp fa-lg" style="color: #25d366;"></i> Whatsapp</a></button>
+          <button class="btn shareBtn p-3 mb-5 mb-md-0"><a href="https://t.me/share/url?url=file:///C:/Users/hp/Desktop/HopeDrops%20website/home.ejs" target="_blank"><i class="fa-brands fa-telegram fa-lg" style="color: #0088cc;" ></i> Telegram</a></button>
+          <button class="btn shareBtn p-3 mb-5 mb-md-0"><a href="https://www.facebook.com/sharer/sharer.php?u=file:///C:/Users/hp/Desktop/HopeDrops%20website/home.ejs#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook fa-lg" style="color: #1877f2;"></i> Facebook</a></button>
+        </div>
+      </div>
+  </div>
+<!--End share-->
+
+    <!-- Useful information -->
+
+      
+
+
+
+
+
+
+ <!--start Statistics-->
+
+ <%- include('../views/partials/statistics.ejs') %>
+
+   
+
+<!--Start footer-->
+
+<%- include('../views/partials/footer.ejs') %>
+
+  <!-- <div class="footer pt-5 pb-5 text-center text-md-start">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="info mb-4">
+            <h5 class="fw-bold" href="#"><span>Hope</span>Drops</h5>
+            <p>If you are unable to donate blood , you can still difference by spreading the word about this website on social media</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="links">
+            <h5 class=>Links</h5>
+            <ul class="list-unstyled lh-lg">
+              <li><a href="/views/home.ejs">Home</a></li>
+              <li><a href="/views/donors.ejs">List Of Donors</a></li>
+              <li><a href="/views/aboutus.ejs">About</a></li>
+              <li><a href="/views/MyAccount.ejs">My Account</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="links">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled lh-lg">
+              <li>+9627090656044</li>
+              <li>HopeDrops24@gmail.com </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2">
+          <div class="contact mb-4">
+            <h5 class="text-center">Social Media</h5>
+            <ul class="list-unstyled mt-3 d-flex gap-3 align-items-center justify-content-center">
+              <a class="d-block text-light" href="https://www.facebook.com/"><i class="fa-brands fa-facebook p-2 fa-lg" style="color: #000000;"></i></a>
+              <a class="d-block text-light" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg instagram  p-2" style="color: #000000;"></i></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!--End footer-->
+
+       
+
+<!-- <script src="/main.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/all.min.js"></script>  -->
+
+
+<!-- Make sure 2no 2l directory sa7 or 7at23d nos yom la tktshf lsh 2l link msh zabet  -->
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/all.min.js"></script>
+<script src="/public/main.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+
+</body>
+</ejs>

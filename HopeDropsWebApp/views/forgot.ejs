@@ -1,0 +1,94 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    <link rel="stylesheet" href="/public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/all.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  
+
+    <title>Forgot Password</title>
+
+    <script>
+
+
+        function validateForm() {
+
+          var email = document.getElementById('email').value;
+
+          // Email Validation
+          if (!email.includes('@gmail.com') && !email.includes('@hotmail.com') && !email.includes('@icloud.com') ) {
+            alert('Please enter a valid email address.');
+            return false; // Prevent form submission
+          }        
+          return true; // Proceed with form submission
+        }
+         
+        
+        
+        
+        
+          </script>
+    
+
+</head>
+<body>
+<!--start nav-->
+
+    <%- include('../views/partials/header.ejs') %>
+
+         <form action="/forgot" method="post" onsubmit=" return validateForm();">
+    <div class="container d-flex align-items-center vh-100">
+        <!-- Your centered modal code -->
+       
+          <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Enter your email to find your account</h1>
+          
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com" required>
+                <label for="floatingInput">Email address</label>
+              </div>
+              
+              
+                     <button class="w-100 mb-2 btn btn-lg rounded-3" style="background-color: #D27878;" type="submit">Send code</button>
+             </form>
+             
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    
+
+    
+
+
+
+
+
+
+
+
+<!--Start footer-->
+
+<%- include('../views/partials/footer.ejs') %>
+
+
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/all.min.js"></script>
+<script src="/public/main.js"></script>
+
+</body>
+</ejs>

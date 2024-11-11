@@ -1,0 +1,54 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/all.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <title>Header</title>
+</head>
+<body>
+<!--start nav-->
+  <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+    <div class="container">
+      <!-- <a class="navbar-brand fw-bold" href="#"><img src="/public/Images/pulse.png"> HopeDrops</a> -->
+
+      <a class="navbar-brand fw-bold" href="../home.ejs"><img src="/public/Images/pulse.png"> HopeDrops</a>
+
+
+      
+      <button class="navbar-toggler" type="button" 
+       data-bs-toggle="collapse"
+       data-bs-target="#main" 
+       aria-controls="main" 
+       aria-expanded="false" 
+       aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+
+    <div class="collapse navbar-collapse" id="main">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link p-2 p-lg-3 " aria-current="page" href="/views/home.ejs">Home</a></li>
+        <li class="nav-item"><a class="nav-link p-2 p-lg-3" href="/views/donors.ejs">List of Donors</a></li>
+        <li class="nav-item"><a class="nav-link p-2 p-lg-3" href="/views/search.ejs">Search for Hospitals</a></li>           
+
+        <li class="nav-item"><a class="nav-link p-2 p-lg-3" href="/views/aboutus.ejs">About</a></li>
+        <li class="nav-item"><a class="nav-link p-2 p-lg-3" href="/views/MyAccount.ejs">My Account</a></li>   
+        <li class="nav-item"><a class="nav-link p-2 p-lg-3" href="/views/login.ejs">Login</a></li>           
+      </ul>
+    </div>
+        
+    <div class="flag ms-5 d-none d-lg-block"><img src="/public/Images/JordanFlag.png"></div>
+    </div>
+  </nav>
+<!--end nav-->
+
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/all.min.js"></script>
+<script src="/public/main.js"></script>    
+
+
+</body>
+</ejs>

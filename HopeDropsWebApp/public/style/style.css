@@ -1,0 +1,279 @@
+:root{
+    --black-color:#000000;
+    --red-color:#D27878;
+    --gray-color:#e2e2e2c4;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color:#f6f6f6;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--red-color);
+    border-radius: 20px;
+}
+.main-btn{
+    background-color: var(--red-color);
+    color: black;
+    border: none;
+    padding: 0.6rem 1rem;
+    width: 210px;
+}
+.main-btn:hover{
+    background-color: var(--red-color);
+    color: #D27878;
+}
+.main-title{
+    color: var(--red-color);
+}
+.main-title::after{
+    content:'';
+    width: 400px;
+    height: 2px;
+    background-color: var(--red-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+/*start nav*/
+.navbar .navbar-nav .nav-link{
+    font-weight: 600;
+    color:var(--black-color);
+}
+
+.navbar .navbar-nav .nav-link:focus ,
+.navbar .navbar-nav .nav-link:hover{
+color: var(--red-color);
+}
+.navbar .navbar-toggler{
+ color: var(--black-color);
+ border-color: var(--black-color);
+ font-size: 25px;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--red-color);
+}
+/*end nav*/
+
+/*start footer*/
+.footer{
+    background-color: var(--red-color);
+    color: black;
+}
+.footer .contact a i {
+    color: #000000;
+}
+.links ul li a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+/*end footer*/
+
+
+/* start Home page style*/
+/*start section*/
+.section{
+    min-height: calc(80vh - 72px);
+    
+}
+.section h2{
+    color: var(--red-color);
+}
+/*end section*/
+
+/*start benefits*/
+.benefits .row .items .drop{
+    color: var(--red-color);
+}
+/*end benefits*/
+
+/*Start Conditions*/
+.Conditions .text .drop{
+ color: var(--red-color);
+}
+/*end Conditions*/
+
+/*start share*/
+.share{
+    background-color: var(--red-color);
+}
+.shareBtn{
+background-color: white;
+}
+.shareBtn:hover{
+    background-color: white;
+    }
+.shareBtn a{
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: 700;
+}
+/*end share*/
+
+/*start Statistics*/
+.StatCard {
+    width: 250px;
+    height: 80px;
+    padding: 40px;
+    border-radius: 10px;
+  }
+.bloodGroup{
+    color: var(--red-color);
+    font-weight: 600;
+    font-size: 35px;
+    margin-right: 5px;
+}
+.StatCard .num {  
+    text-align: center;
+    font-size: 40px;
+    border-radius: 10px;
+    width: 60px;
+    background-color: var(--red-color);
+  }
+/*end Statistics*/
+/* End Home page style*/
+
+
+/* start signup page style*/
+/*start register*/
+.register h2{
+    color: var(--red-color);
+}
+.register{
+    min-height: calc(130vh - 72px);
+}
+.register p{
+    color: var(--black-color);
+}
+.register .form-select {
+    background-color: var(--gray-color);
+    
+}
+.register input{
+    background-color: var(--gray-color);
+}
+.log a{
+    color: var(--red-color);
+    text-decoration: none;
+}
+/*End register*/
+/* End signup page style*/
+
+
+/* start Aboutus page style*/
+/*start about*/
+.whoWeAre .text{
+    color: var(--red-color);
+}
+.purpose .text{
+    color: var(--red-color);
+}
+.aim .text{
+    color: var(--red-color);
+}
+/*end about*/
+/* End Aboutus page style*/
+
+
+/* start Login page style*/
+/*start login*/
+.login h2{
+    color: var(--red-color);
+}
+.login{
+    min-height: calc(100vh - 72px);
+}
+.login p{
+    color: var(--black-color);
+}
+.login input{
+    background-color: var(--gray-color);
+}
+.login .forgotPass a{
+    color: var(--red-color);
+    text-decoration: none;
+}
+.newAcc a{
+    color: var(--red-color);
+    text-decoration: none;
+}
+/*End login*/
+/* End Login page style*/
+
+
+/* start ListOfDonors page style*/
+/*start search*/
+.search{
+    min-height: calc(50vh - 72px);   
+}
+.searchBtn{
+    background-color: var(--red-color);
+    color: black;
+    border: 2px solid black;
+    padding: 0.6rem 1rem;
+    width: 200px;
+}
+.searchBtn:hover{
+    background-color: var(--red-color);
+    border: 2px solid black;
+}
+.searchBox{
+    background-color: var(--red-color);
+}
+/*end search*/
+
+/*start Donors*/
+.donors{
+    min-height: 400px    
+}
+.donors .DonorsInfo{
+    height: 180px;
+    background-color: var(--red-color);
+    border-radius: 6px;
+}
+.donors .infos{
+    height: 70px;
+}
+.donors .DonorsInfo .donorPhone a{
+    text-decoration: none;
+    color:#026602
+}
+
+/*end Donors*/
+/* End ListOfDonors page style*/
+
+
+/* start MyAccount page style*/
+/*start account*/
+.account{
+    min-height: calc(100vh - 72px);
+}
+.account .accInfo{
+    background-color: var(--gray-color);
+}
+/*end acount*/
+
+/*start profileImage*/
+.profileImage img{
+ display: block;
+    
+}
+.profileImage {
+    display: inline;
+}
+.profileImage img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+/*end profileImage*/
+/* End MyAccount page style*/

@@ -1,0 +1,144 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/all.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+<body>
+<!--start nav-->
+<%- include('../views/partials/header.ejs') %>
+
+
+<!--start register-->
+ <!--Form, this comment has been added after the file was converted to an ejs  -->
+<form action="/register" method="post"  onsubmit="return validateForm();">
+
+ <div class="register d-flex justify-content-center align-items-center ">
+    <div class="text-center text-light">
+      <h2 class="fw-bold">Sign up</h2>
+      <p class=" fs-5 mb-5">Step Up, Be a Hero - Donate!</p>
+      <input class="form-control mb-3" type="text" name="full_name" placeholder="Full Name" aria-label="default input example" required>
+      <input class="form-control mb-3" type="text" name="email" id="email" placeholder="Email@gmail.com" aria-label="default input example" required>
+      <input class="form-control mb-3" type="text" name="phone_number" id="phonenumber" placeholder="phone number" aria-label="default input example" required>
+      <input type="password" id="inputPassword" class="form-control mb-3" name="password" placeholder="password" aria-describedby="passwordHelpBlock" required>
+      
+      <!-- Validate in the node code, if < 18 = dont allow else allow -->
+      <input type="text" id="age" class="form-control mb-3" name="age" placeholder="Age" aria-describedby="Age" required>
+
+      <select class="form-select mb-3 " id="bloodType" name="blood_type" required> 
+        <option selected hidden style="display:none" value="">Blood Type</option>
+        <option value="1">A+</option>
+        <option value="2">A-</option>
+        <option value="3">B+</option>
+        <option value="4">B-</option>
+        <option value="5">O+</option>
+        <option value="6">O-</option>
+        <option value="7">AB+</option>
+        <option value="8">AB-</option>
+      </select>
+      <select class="form-select mb-3 " name="city" required>
+       <option selected hidden style="display:none" value="">City</option>
+       <option value="amman">Amman</option>
+       <option value="madaba">Madaba</option>
+       <option value="irbid">Irbid</option>
+       <option value="zarqa">Zarqa</option>
+       <option value="mafraq">Mafraq</option>
+       <option value="ajloun">Ajloun</option>
+      </select>
+     
+      <button type="submit" class="btn rounded-pill main-btn mt-3 mb-3 w-100">Sign Up</button>
+      
+      <div class="log text-center mb-3"><p class="">Already have an account? <a href="login.ejs">Log in</a></p></div>
+    </div>
+  </div>
+
+  </form>
+<!--End register-->
+
+<!--Start footer-->
+<%- include('../views/partials/footer.ejs') %>
+
+
+
+
+<script>
+
+
+function validateForm() {
+
+var bloodType = document.getElementById('bloodType').value;
+
+var email = document.getElementById('email').value;
+var phoneNumber = document.getElementById('phonenumber').value;
+var password = document.getElementById('inputPassword').value;
+var age = document.getElementById('age').value;
+
+if (isNaN(age) || age < 18 || age > 65) {
+  alert("The minimum age is 18 years and the maximum is 65");
+  return false;
+}
+
+
+if (bloodType === "") {
+  alert('Please select a blood type.');
+  return false; // Prevent form submission
+}
+
+// Email Validation
+if (!email.includes('@gmail.com') && !email.includes('@hotmail.com') && !email.includes('@icloud.com')) {
+  alert('Please enter a valid email address.');
+  return false; // Prevent form submission
+}
+
+// Phone Number Validation
+if (!phoneNumber.startsWith('+962')) {
+  alert('Please enter a phone number starting with +962.');
+  return false; // Prevent form submission
+}
+
+if (phoneNumber.contains('/[a-zA-Z]/')) {
+  alert('Enter a valid phone number');
+  return false; // Prevent form submission
+}
+
+if (phoneNumber.length !== 13) {
+  alert('Phone number should be 13 digits');
+  return false; // Prevent form submission
+}
+
+
+
+// Password Validation
+if (password.length < 8) {
+  alert('Password should be at least 8 characters long.');
+  return false; // Prevent form submission
+}
+
+// Additional validation checks can be added as needed
+
+return true; // Proceed with form submission
+}
+ 
+
+
+
+
+  </script>
+
+
+
+
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/all.min.js"></script>
+<script src="/public/main.js"></script>
+
+
+</body>
+</ejs>

@@ -1,0 +1,87 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/all.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <title> Login</title>
+
+    <script>
+      function validateEmail() {
+          var emailInput = document.getElementById('Email');
+          var emailValue = emailInput.value;
+
+          // Define the allowed email domains
+          var allowedDomains = ['@gmail', '@hotmail', '@icloud'];
+
+          // Check if the email contains any of the allowed domains
+          var isValid = allowedDomains.some(function(domain) {
+              return emailValue.includes(domain);
+          });
+
+          // Display an error message if the email is not valid
+          if (!isValid) {
+              alert('Invalid email address. Please use a valid email domain: @gmail, @hotmail, @icloud');
+              return false;
+          }
+
+          // If the email is valid, you can proceed with the form submission or any other action
+          return true;
+      }
+  </script>
+
+
+
+
+  </head>
+<body>
+<!--start nav-->
+<%- include('../views/partials/header.ejs') %>
+
+  
+
+<!--start login-->
+<form action="/login" method="post"> 
+<div class="login d-flex justify-content-center align-items-center ">
+    <div class="text-center text-light">
+      <h2 class="fw-bold">Log in</h2>
+      <p class=" fs-5 mb-5">Step Up, Be a Hero - Donate!</p>
+      <input class="form-control mb-3" type="text" name="email" id="Email" placeholder="Email" aria-label="default input example" required>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="password" aria-describedby="passwordHelpBlock" required>
+     
+      <div class="forgotPass text-start mt-2 mb-2">
+        <a href="forgot.ejs">Forgot password?</a>
+      </div>
+     
+      <!-- <a class="btn rounded-pill main-btn mt-3 mb-3 w-100" href="home.ejs">Log in</a> -->
+      
+      <button type="submit" class="btn rounded-pill main-btn mt-3 mb-3 w-100">Log in</button>
+      
+      <div class="newAcc text-center mb-3">
+        <p class="">Don't have an account? <a href="register.ejs">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+</form> 
+
+<!--End register--> 
+
+<!--Start footer-->
+<%- include('../views/partials/footer.ejs') %>
+
+
+
+<!-- <script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/all.min.js"></script>     -->
+
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/all.min.js"></script>
+<script src="/public/main.js"></script>
+
+</body>
+</ejs>

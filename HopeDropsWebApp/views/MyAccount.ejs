@@ -1,0 +1,189 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/all.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <title>My Account</title>
+</head>
+
+  <style>
+/* .main-btn:hover{
+    background-color: var(--red-color);
+    color: black;
+
+} */
+
+  .update-btn{
+      background-color: #D27878 !important;
+      color: black !important;
+  }
+
+
+    
+  </style>
+
+
+
+
+<body>
+<!--start nav-->
+<%- include('../views/partials/header.ejs') %>
+
+
+
+
+ 
+<!--start Account-->
+
+<form action="/MyAccount" method="post">
+  <div class="account pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12-lg">
+          <div class=" mb-5">
+            <h3>My Account</h3>
+            <div class="profileImage ">
+                             
+              
+            </div>
+            
+            <!-- <a class="btn main-btn fw-bold" href="#">Edit profile</a>                 -->
+         
+
+            
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="full_name" value="Abdullah Murad" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" value="AbdullahMurad@gmail.com"required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">phone Number</label>
+            <input type="text" class="form-control" name="phone_number" value="+962502955566" required>
+          </div>
+                   
+          <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input type="text" class="form-control" name="age" value="21" required>
+          </div>
+
+
+        </div>
+
+        <div class="col-lg-6">
+          <div class="mb-3">
+            <label class="form-label">Blood Type</label>
+            <select name="blood_type" class="form-select " required>
+              <option selected hidden style="display:none"  value="A+"></option>
+              <option value="1">A+</option>
+              <option value="2">A-</option>
+              <option value="3">B+</option>
+              <option value="4">B-</option>
+              <option value="5">O+</option>
+              <option value="6">O-</option>
+              <option value="7">AB+</option>
+              <option value="8">AB-</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">City</label>
+            <select name="city_name" class="form-select" required>
+              <option selected hidden style="display:none" value="Amman"></option>
+              <option value="Amman">Amman</option>
+              <option value="Madaba">Madaba</option>
+              <option value="Irbid">Irbid</option>
+              <option value="Zarqa">Zarqa</option>
+              <option value="Mafraq">Mafraq</option>
+              <option value="Ajloun">Ajloun</option>
+
+            </select>
+          </div>
+          
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="pa" class="form-control"  value="" required>
+          </div>    
+    
+         </div>
+      </div>
+      <button class="btn update-btn fw-bold" type="button" style="width: 200px;"  name="edit">Update</button>
+    </div>
+  </div>
+  
+
+
+</form>
+<!--end Acount-->
+
+<!--Start footer-->
+<%- include('../views/partials/footer.ejs') %>
+
+  <!-- <div class="footer pt-5 pb-5 text-center text-md-start">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="info mb-4">
+            <h5 class="fw-bold" href="#"><span>Hope</span>Drops</h5>
+            <p>If you are unable to donate blood , you can still difference by spreading the word about this website on social media</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="links">
+            <h5 class=>Links</h5>
+            <ul class="list-unstyled lh-lg">
+              <li><a href="/views/home.ejs">Home</a></li>
+              <li><a href="/views/donors.ejs">List Of Donors</a></li>
+              <li><a href="/views/aboutus.ejs">About</a></li>
+              <li><a href="/views/MyAccount.ejs">My Account</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="links">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled lh-lg">
+              <li>+9627090656044</li>
+              <li>HopeDrops24@gmail.com </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2">
+          <div class="contact mb-4">
+            <h5 class="text-center">Social Media</h5>
+            <ul class="list-unstyled mt-3 d-flex gap-3 align-items-center justify-content-center">
+              <a class="d-block text-light" href="https://www.facebook.com/"><i class="fa-brands fa-facebook p-2 fa-lg" style="color: #000000;"></i></a>
+              <a class="d-block text-light" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg instagram  p-2" style="color: #000000;"></i></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!--End footer-->
+  
+
+<!-- <script src="/main.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/all.min.js"></script>     -->
+
+<script src="/public/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/all.min.js"></script>
+<script src="/public/main.js"></script>
+
+</body>
+</ejs>
